@@ -1,0 +1,27 @@
+{
+  "name": "@arkplay/avatar-studio-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone and embeddable (iframe) host for the ArkPlay avatar studio. Served at /avatar/studio/.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@arkplay/avatar-client": "*",
+    "@arkplay/avatar-engine": "*",
+    "@arkplay/avatar-studio": "*",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  }
+}

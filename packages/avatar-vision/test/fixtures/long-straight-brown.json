@@ -1,0 +1,108 @@
+{
+  "_comment": "Long straight dark-brown hair with a centre part, no bangs, light skin, blue eyes, red top.",
+  "measured": {
+    "colors": {
+      "skin": {
+        "hex": "#e8b89a",
+        "confidence": 0.9,
+        "n": 2000
+      },
+      "hair": {
+        "hex": "#4a3222",
+        "confidence": 0.9,
+        "n": 2000
+      },
+      "iris": {
+        "hex": "#5b7fa8",
+        "confidence": 0.7,
+        "n": 300
+      },
+      "lips": {
+        "hex": "#c8766f",
+        "confidence": 0.8,
+        "n": 600
+      },
+      "brows": {
+        "hex": "#3d2a1e",
+        "confidence": 0.6,
+        "n": 300
+      },
+      "top": {
+        "hex": "#c62828",
+        "confidence": 0.8,
+        "n": 4000
+      },
+      "background": {
+        "hex": "#d8d8d0",
+        "confidence": 0.9,
+        "n": 2000
+      }
+    },
+    "geometry": {
+      "faceWidthRatio": 0.78,
+      "jawRatio": 0.77,
+      "chinRatio": 0.215,
+      "foreheadRatio": 0.3,
+      "cheekFullness": 0.87,
+      "eyeSize": 0.205,
+      "eyeSpacing": 0.23,
+      "eyeTilt": 4,
+      "browThickness": 0.045,
+      "browArch": 0.1,
+      "noseWidth": 0.26,
+      "noseLength": 0.3,
+      "mouthWidth": 0.36,
+      "lipFullness": 0.34,
+      "earVisibility": 0.2
+    },
+    "hair": {
+      "hairArea": 1.6,
+      "hairTopHeight": 0.78,
+      "hairWidth": 1.35,
+      "hairBottom": 0.75,
+      "foreheadCoverage": 0.05,
+      "partX": 0.03
+    },
+    "expression": {
+      "smile": 0.35,
+      "mouthOpen": 0.05,
+      "browRaise": 0.1,
+      "eyeOpen": 0.9
+    },
+    "cues": {
+      "beardCoverage": 0.03,
+      "beardDarkening": 0.01,
+      "beardChin": 0.02,
+      "beardSides": 0.02,
+      "beardBelowChin": 0,
+      "mustacheCoverage": 0.02,
+      "glassesEdges": 0.05,
+      "darkLenses": 0,
+      "headCover": 0.02,
+      "sideCover": 0.03,
+      "earAccessory": 0,
+      "headphoneBand": 0,
+      "neckAccessory": 0,
+      "spotDensity": 0.1,
+      "linerScore": 0.05,
+      "lidShadowScore": 0.05,
+      "hairCoherence": 0.9,
+      "hairRoughness": 0.12,
+      "hairTopWidth": 0.85,
+      "hairSideRatio": 1.0,
+      "bangsAsymmetry": 0,
+      "bangsCentre": 0.05,
+      "partStrength": 0.6,
+      "hairlineHeight": 0.3,
+      "hairTipLift": 0.01,
+      "hairSecondShare": 0.3,
+      "hairSecondDelta": 0.04,
+      "hairClipped": 0.2,
+      "shoulderSkin": 0.05,
+      "neckCover": 0.2,
+      "clothesShare": 0.4,
+      "templeRatio": 0.74,
+      "eyeAspect": 0.3
+    }
+  }
+}

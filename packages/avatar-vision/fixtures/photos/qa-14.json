@@ -1,0 +1,83 @@
+{
+  "file": "qa-14.jpg",
+  "crop": "crops/qa-14.png",
+  "id": "qa-00067",
+  "seed": 3000067,
+  "width": 832,
+  "height": 1024,
+  "labels": {
+    "hair_length": "bald",
+    "hair_texture": null,
+    "hair_arrangement": null,
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": "none",
+    "hair_part": "none",
+    "hair_color_style": null,
+    "hairline": null,
+    "beard": "none",
+    "mustache": "none",
+    "eyewear": null,
+    "headwear": "none",
+    "earrings": "none",
+    "headphones": "no",
+    "necklace": "pendant",
+    "freckles": "none",
+    "eye_makeup": null,
+    "top": "denim-jacket"
+  },
+  "masked": [
+    "eyewear",
+    "eye_makeup"
+  ],
+  "targeted": {
+    "hair_length": "bald",
+    "hair_texture": null,
+    "hair_arrangement": null,
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": "none",
+    "hair_part": "none",
+    "hair_color_style": null,
+    "hairline": null,
+    "beard": "none",
+    "mustache": "none",
+    "eyewear": "rect-glasses",
+    "headwear": "none",
+    "earrings": "none",
+    "headphones": "no",
+    "necklace": "pendant",
+    "freckles": "none",
+    "eye_makeup": "both",
+    "top": "denim-jacket"
+  },
+  "face": {
+    "box": [
+      204.85,
+      185.91,
+      348.28,
+      451.66
+    ],
+    "eyeL": [
+      276.65,
+      354.39
+    ],
+    "eyeR": [
+      434.58,
+      349.1
+    ],
+    "nose": [
+      342.99,
+      451.27
+    ],
+    "mouthL": [
+      292.17,
+      516.67
+    ],
+    "mouthR": [
+      428.96,
+      512.64
+    ],
+    "score": 0.9137
+  }
+}

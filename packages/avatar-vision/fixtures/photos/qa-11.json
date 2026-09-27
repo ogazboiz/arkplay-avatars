@@ -1,0 +1,84 @@
+{
+  "file": "qa-11.jpg",
+  "crop": "crops/qa-11.png",
+  "id": "qa-00006",
+  "seed": 3000006,
+  "width": 832,
+  "height": 1024,
+  "labels": {
+    "hair_length": null,
+    "hair_texture": "coily",
+    "hair_arrangement": "afro",
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": "none",
+    "hair_part": null,
+    "hair_color_style": "ombre",
+    "hairline": "receding",
+    "beard": "none",
+    "mustache": "none",
+    "eyewear": "aviators",
+    "headwear": "none",
+    "earrings": "hoops",
+    "headphones": null,
+    "necklace": "none",
+    "freckles": null,
+    "eye_makeup": null,
+    "top": "denim-jacket"
+  },
+  "masked": [
+    "hair_part",
+    "headphones",
+    "freckles"
+  ],
+  "targeted": {
+    "hair_length": null,
+    "hair_texture": "coily",
+    "hair_arrangement": "afro",
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": "none",
+    "hair_part": "none",
+    "hair_color_style": "ombre",
+    "hairline": "receding",
+    "beard": "none",
+    "mustache": "none",
+    "eyewear": "aviators",
+    "headwear": "none",
+    "earrings": "hoops",
+    "headphones": "no",
+    "necklace": "none",
+    "freckles": "heavy",
+    "eye_makeup": null,
+    "top": "denim-jacket"
+  },
+  "face": {
+    "box": [
+      276.51,
+      275.13,
+      244.14,
+      321.24
+    ],
+    "eyeL": [
+      342.8,
+      387.32
+    ],
+    "eyeR": [
+      450.18,
+      391.82
+    ],
+    "nose": [
+      389.02,
+      455.1
+    ],
+    "mouthL": [
+      345.63,
+      506.75
+    ],
+    "mouthR": [
+      437.08,
+      510.3
+    ],
+    "score": 0.9277
+  }
+}

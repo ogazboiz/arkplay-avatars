@@ -1,0 +1,88 @@
+{
+  "_comment": "Written by scripts/fetch-models.ts. SHA-256 of every file in models/. Model URLs are the official MediaPipe \"latest\" builds, pinned here; runtimes are copied from node_modules.",
+  "generated": "2026-09-26T13:07:15.816Z",
+  "files": {
+    "attributes.int8.onnx": {
+      "sha256": "a8cb5e5a88b2896488b767d410ce62597091f6915b509fd5b4afc41cb241334b",
+      "bytes": 23911653,
+      "source": "attribute model trainer (export.py)"
+    },
+    "attributes.json": {
+      "sha256": "7f64cc3c2c217ee362d4ae5450b60b89e449be866de51a17b6a3e20d3373b885",
+      "bytes": 14623,
+      "source": "attribute model trainer (export.py)"
+    },
+    "face_landmarker.task": {
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+      "bytes": 3758596,
+      "source": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task",
+      "license": "Apache-2.0"
+    },
+    "runtime/mediapipe-1.0.1/vision_wasm_internal.js": {
+      "sha256": "e170ee67dd4e16c1a6fcd8840a206687e5a59b22c20e4a902bc445b095454d73",
+      "bytes": 323377,
+      "source": "npm:@mediapipe/tasks-vision@1.0.1/wasm/vision_wasm_internal.js",
+      "license": "Apache-2.0"
+    },
+    "runtime/mediapipe-1.0.1/vision_wasm_internal.wasm": {
+      "sha256": "8da277a733926eacd0474b8704b36742d6ec3231c57a860c5b889dff8f1df886",
+      "bytes": 11756954,
+      "source": "npm:@mediapipe/tasks-vision@1.0.1/wasm/vision_wasm_internal.wasm",
+      "license": "Apache-2.0"
+    },
+    "runtime/mediapipe-1.0.1/vision_wasm_nosimd_internal.js": {
+      "sha256": "e81d715a3d42cc3373602eb2f7aff795d164934db680e32496b65dab537f9658",
+      "bytes": 323180,
+      "source": "npm:@mediapipe/tasks-vision@1.0.1/wasm/vision_wasm_nosimd_internal.js",
+      "license": "Apache-2.0"
+    },
+    "runtime/mediapipe-1.0.1/vision_wasm_nosimd_internal.wasm": {
+      "sha256": "a28483cd42e74e855bf5ebdb6b40d9b66a5b49e35e95020bc97669e6822a3192",
+      "bytes": 10960242,
+      "source": "npm:@mediapipe/tasks-vision@1.0.1/wasm/vision_wasm_nosimd_internal.wasm",
+      "license": "Apache-2.0"
+    },
+    "runtime/ort-1.30.0/ort-wasm-simd-threaded.asyncify.mjs": {
+      "sha256": "3d1c85995364bb643302fc6fd877a0c3ba5ae72401815e0f24828a53d9191e28",
+      "bytes": 53057,
+      "source": "npm:onnxruntime-web@1.30.0/dist/ort-wasm-simd-threaded.asyncify.mjs",
+      "license": "MIT"
+    },
+    "runtime/ort-1.30.0/ort-wasm-simd-threaded.asyncify.wasm": {
+      "sha256": "39f9f0894d478800487ed9f7dbe92618498db320cf55c8e3d89adff8dce658da",
+      "bytes": 26781914,
+      "source": "npm:onnxruntime-web@1.30.0/dist/ort-wasm-simd-threaded.asyncify.wasm",
+      "license": "MIT"
+    },
+    "runtime/ort-1.30.0/ort-wasm-simd-threaded.mjs": {
+      "sha256": "e13f7f94fc51b4ca72b12faeb1ee95f4ace6dfbc8939bc718aabdc0a27c4299b",
+      "bytes": 24381,
+      "source": "npm:onnxruntime-web@1.30.0/dist/ort-wasm-simd-threaded.mjs",
+      "license": "MIT"
+    },
+    "runtime/ort-1.30.0/ort-wasm-simd-threaded.wasm": {
+      "sha256": "3398c10d07d229bd91b364548e130e0e51a8e5704b88c7c083ebbeb78842dee2",
+      "bytes": 14239897,
+      "source": "npm:onnxruntime-web@1.30.0/dist/ort-wasm-simd-threaded.wasm",
+      "license": "MIT"
+    },
+    "runtime/ort-1.30.0/ort.wasm.min.mjs": {
+      "sha256": "219e6a1fc8a9938268d18efca3c91d310bd2f4a59bbd13744df5b2b7fc6cee3b",
+      "bytes": 50126,
+      "source": "npm:onnxruntime-web@1.30.0/dist/ort.wasm.min.mjs",
+      "license": "MIT"
+    },
+    "runtime/ort-1.30.0/ort.webgpu.min.mjs": {
+      "sha256": "3dffff71811bc13a3a3d9591c57ca5ee5735b8f5f3eaf789510b02bb040ae3a0",
+      "bytes": 66349,
+      "source": "npm:onnxruntime-web@1.30.0/dist/ort.webgpu.min.mjs",
+      "license": "MIT"
+    },
+    "selfie_multiclass_256x256.tflite": {
+      "sha256": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0",
+      "bytes": 16371837,
+      "source": "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/latest/selfie_multiclass_256x256.tflite",
+      "license": "Apache-2.0"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "_comment": "A big rounded afro with coily texture, brown eyes, yellow top.",
+  "measured": {
+    "colors": {
+      "skin": {
+        "hex": "#8c5539",
+        "confidence": 0.9,
+        "n": 2000
+      },
+      "hair": {
+        "hex": "#2d1f18",
+        "confidence": 0.9,
+        "n": 2000
+      },
+      "iris": {
+        "hex": "#3b2314",
+        "confidence": 0.5,
+        "n": 200
+      },
+      "lips": {
+        "hex": "#9a5048",
+        "confidence": 0.7,
+        "n": 500
+      },
+      "top": {
+        "hex": "#fdd835",
+        "confidence": 0.8,
+        "n": 4000
+      },
+      "background": {
+        "hex": "#5e7fb0",
+        "confidence": 0.9,
+        "n": 2000
+      }
+    },
+    "geometry": {
+      "faceWidthRatio": 0.82,
+      "jawRatio": 0.77,
+      "chinRatio": 0.215,
+      "foreheadRatio": 0.3,
+      "cheekFullness": 0.87,
+      "eyeSize": 0.205,
+      "eyeSpacing": 0.23,
+      "eyeTilt": 4,
+      "browThickness": 0.045,
+      "browArch": 0.1,
+      "noseWidth": 0.26,
+      "noseLength": 0.3,
+      "mouthWidth": 0.36,
+      "lipFullness": 0.34,
+      "earVisibility": 0.2
+    },
+    "hair": {
+      "hairArea": 2.4,
+      "hairTopHeight": 1.02,
+      "hairWidth": 1.78,
+      "hairBottom": -0.12,
+      "foreheadCoverage": 0.1,
+      "partX": null
+    },
+    "expression": {
+      "smile": 0.35,
+      "mouthOpen": 0.05,
+      "browRaise": 0.1,
+      "eyeOpen": 0.9
+    },
+    "cues": {
+      "beardCoverage": 0.03,
+      "beardDarkening": 0.01,
+      "beardChin": 0.02,
+      "beardSides": 0.02,
+      "beardBelowChin": 0,
+      "mustacheCoverage": 0.02,
+      "glassesEdges": 0.05,
+      "darkLenses": 0,
+      "headCover": 0.02,
+      "sideCover": 0.03,
+      "earAccessory": 0,
+      "headphoneBand": 0,
+      "neckAccessory": 0,
+      "spotDensity": 0.1,
+      "linerScore": 0.05,
+      "lidShadowScore": 0.05,
+      "hairCoherence": 0.38,
+      "hairRoughness": 0.6,
+      "hairTopWidth": 1.3,
+      "hairSideRatio": 1.1,
+      "bangsAsymmetry": 0,
+      "bangsCentre": 0.05,
+      "partStrength": 0,
+      "hairlineHeight": 0.3,
+      "hairTipLift": 0.01,
+      "hairSecondShare": 0.3,
+      "hairSecondDelta": 0.04,
+      "hairClipped": 0,
+      "shoulderSkin": 0.05,
+      "neckCover": 0.2,
+      "clothesShare": 0.4,
+      "templeRatio": 0.74,
+      "eyeAspect": 0.3
+    }
+  }
+}

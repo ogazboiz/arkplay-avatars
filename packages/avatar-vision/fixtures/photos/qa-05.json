@@ -1,0 +1,87 @@
+{
+  "file": "qa-05.jpg",
+  "crop": "crops/qa-05.png",
+  "id": "qa-00057",
+  "seed": 3000057,
+  "width": 832,
+  "height": 1024,
+  "labels": {
+    "hair_length": null,
+    "hair_texture": null,
+    "hair_arrangement": null,
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": null,
+    "hair_part": null,
+    "hair_color_style": "highlights",
+    "hairline": null,
+    "beard": "none",
+    "mustache": "none",
+    "eyewear": "none",
+    "headwear": "fedora",
+    "earrings": null,
+    "headphones": "no",
+    "necklace": "none",
+    "freckles": "none",
+    "eye_makeup": "none",
+    "top": null
+  },
+  "masked": [
+    "hair_length",
+    "hair_texture",
+    "hair_arrangement",
+    "bangs",
+    "earrings",
+    "top"
+  ],
+  "targeted": {
+    "hair_length": "short",
+    "hair_texture": "wavy",
+    "hair_arrangement": "down",
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": "wispy",
+    "hair_part": null,
+    "hair_color_style": "highlights",
+    "hairline": null,
+    "beard": "none",
+    "mustache": "none",
+    "eyewear": "none",
+    "headwear": "fedora",
+    "earrings": "hoops",
+    "headphones": "no",
+    "necklace": "none",
+    "freckles": "none",
+    "eye_makeup": "none",
+    "top": "tshirt"
+  },
+  "face": {
+    "box": [
+      251.6,
+      242.16,
+      274.49,
+      379.34
+    ],
+    "eyeL": [
+      329.49,
+      381.36
+    ],
+    "eyeR": [
+      467.73,
+      380.57
+    ],
+    "nose": [
+      403.43,
+      458.67
+    ],
+    "mouthL": [
+      335.79,
+      508.09
+    ],
+    "mouthR": [
+      469.4,
+      508.13
+    ],
+    "score": 0.9457
+  }
+}

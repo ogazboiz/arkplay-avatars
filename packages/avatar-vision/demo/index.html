@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Avatar Vision QA</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Avatar from a photo <span class="muted">QA</span></h1>
+      <p class="muted">Everything runs in this tab. Photos and anything measured from them stay in memory and are never uploaded, stored or logged.</p>
+    </header>
+
+    <section class="inputs">
+      <div id="drop" class="drop">
+        <strong>Drop a photo here</strong>
+        <span class="muted">or</span>
+        <label class="button">Choose a photo<input id="file" type="file" accept="image/*" hidden /></label>
+        <button id="camera" class="button">Use the camera</button>
+        <label class="check"><input id="mirrored" type="checkbox" /> Photo is mirrored</label>
+      </div>
+      <div id="cam" class="cam" hidden>
+        <video id="video" playsinline muted></video>
+        <div class="row"><button id="snap" class="button">Take photo</button><button id="camStop" class="button ghost">Close camera</button></div>
+      </div>
+      <div class="fixtures">
+        <div class="row between">
+          <h2>QA photos</h2>
+          <div class="row">
+            <button id="runAll" class="button ghost" disabled>Run all</button>
+            <button id="calibrate" class="button ghost" disabled>Calibrate</button>
+            <button id="modelCheck" class="button ghost" disabled>Model check</button>
+          </div>
+        </div>
+        <div id="fixtureList" class="fixture-list"></div>
+      </div>
+    </section>
+
+    <div id="status" class="status muted">Models load when you pick the first photo.</div>
+
+    <section id="result" class="result" hidden>
+      <div class="panels">
+        <figure><canvas id="photo"></canvas><figcaption>Photo, landmarks and sampled regions <label class="check"><input id="showLm" type="checkbox" checked /> overlay</label></figcaption></figure>
+        <figure><canvas id="seg"></canvas><figcaption>Segmentation (<span class="k k1">hair</span> <span class="k k2">body skin</span> <span class="k k3">face skin</span> <span class="k k4">clothes</span> <span class="k k5">others</span>)</figcaption></figure>
+        <figure><canvas id="crop" width="224" height="224"></canvas><figcaption>Aligned crop (model input)</figcaption></figure>
+      </div>
+      <div id="parity" class="panels" hidden>
+        <figure><canvas id="refCrop" width="224" height="224"></canvas><figcaption>Python reference crop (YuNet points)</figcaption></figure>
+        <figure><canvas id="yunetCrop" width="224" height="224"></canvas><figcaption>Browser crop from the same YuNet points</figcaption></figure>
+        <figure><canvas id="diffCrop" width="224" height="224"></canvas><figcaption>|Δ| ×8: browser (MediaPipe points) vs Python</figcaption></figure>
+        <div id="parityText" class="muted parity-text"></div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <h2>Measured colours</h2>
+          <div id="swatches" class="swatches"></div>
+          <h2>Measurements</h2>
+          <table id="measures" class="measures"></table>
+        </div>
+        <div>
+          <h2>Attributes <span id="attrSource" class="pill"></span></h2>
+          <div id="attrs" class="attrs"></div>
+        </div>
+      </div>
+
+      <h2>Candidates</h2>
+      <div id="candidates" class="candidates"></div>
+      <ul id="notes" class="notes"></ul>
+    </section>
+
+    <section id="batch" class="batch" hidden>
+      <h2>All QA photos</h2>
+      <div id="batchGrid" class="batch-grid"></div>
+      <textarea id="calibOut" class="calib" hidden readonly></textarea>
+      <pre id="checkOut" class="calib" hidden></pre>
+    </section>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

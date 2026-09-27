@@ -1,0 +1,288 @@
+{
+  "_comment": "Attributes from the (future) model: a side-swept ponytail parted on the subject's left, earrings.",
+  "measured": {
+    "colors": {
+      "skin": {
+        "hex": "#efc4a2",
+        "confidence": 0.9,
+        "n": 2000
+      },
+      "hair": {
+        "hex": "#a86b3c",
+        "confidence": 0.9,
+        "n": 2000
+      },
+      "iris": {
+        "hex": "#3f7a5c",
+        "confidence": 0.7,
+        "n": 300
+      },
+      "lips": {
+        "hex": "#c97b75",
+        "confidence": 0.8,
+        "n": 600
+      },
+      "top": {
+        "hex": "#f5f2eb",
+        "confidence": 0.8,
+        "n": 4000
+      },
+      "background": {
+        "hex": "#9e9e9e",
+        "confidence": 0.9,
+        "n": 2000
+      }
+    },
+    "geometry": {
+      "faceWidthRatio": 0.82,
+      "jawRatio": 0.77,
+      "chinRatio": 0.215,
+      "foreheadRatio": 0.3,
+      "cheekFullness": 0.87,
+      "eyeSize": 0.205,
+      "eyeSpacing": 0.23,
+      "eyeTilt": 4,
+      "browThickness": 0.045,
+      "browArch": 0.1,
+      "noseWidth": 0.26,
+      "noseLength": 0.3,
+      "mouthWidth": 0.36,
+      "lipFullness": 0.34,
+      "earVisibility": 0.2
+    },
+    "hair": {
+      "hairArea": 0.8,
+      "hairTopHeight": 0.76,
+      "hairWidth": 1.15,
+      "hairBottom": -0.4,
+      "foreheadCoverage": 0.3,
+      "partX": null
+    },
+    "expression": {
+      "smile": 0.35,
+      "mouthOpen": 0.05,
+      "browRaise": 0.1,
+      "eyeOpen": 0.9
+    },
+    "cues": {
+      "beardCoverage": 0.03,
+      "beardDarkening": 0.01,
+      "beardChin": 0.02,
+      "beardSides": 0.02,
+      "beardBelowChin": 0,
+      "mustacheCoverage": 0.02,
+      "glassesEdges": 0.05,
+      "darkLenses": 0,
+      "headCover": 0.02,
+      "sideCover": 0.03,
+      "earAccessory": 0,
+      "headphoneBand": 0,
+      "neckAccessory": 0,
+      "spotDensity": 0.1,
+      "linerScore": 0.05,
+      "lidShadowScore": 0.05,
+      "hairCoherence": 0.8,
+      "hairRoughness": 0.2,
+      "hairTopWidth": 0.85,
+      "hairSideRatio": 1.0,
+      "bangsAsymmetry": 0,
+      "bangsCentre": 0.05,
+      "partStrength": 0,
+      "hairlineHeight": 0.3,
+      "hairTipLift": 0.01,
+      "hairSecondShare": 0.3,
+      "hairSecondDelta": 0.04,
+      "hairClipped": 0,
+      "shoulderSkin": 0.05,
+      "neckCover": 0.2,
+      "clothesShare": 0.4,
+      "templeRatio": 0.74,
+      "eyeAspect": 0.3
+    }
+  },
+  "attributes": {
+    "source": "model",
+    "heads": {
+      "hair_length": [
+        0,
+        0,
+        0.05,
+        0.05,
+        0.15,
+        0.5,
+        0.2,
+        0.05
+      ],
+      "hair_texture": [
+        0.7,
+        0.25,
+        0.04,
+        0.01
+      ],
+      "hair_arrangement": [
+        0.1,
+        0.8,
+        0.05,
+        0.02,
+        0,
+        0,
+        0.01,
+        0.01,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.01
+      ],
+      "hair_sides": [
+        0.95,
+        0.04,
+        0.01
+      ],
+      "hair_top": [
+        0.7,
+        0.1,
+        0,
+        0,
+        0.15,
+        0.05
+      ],
+      "bangs": [
+        0.2,
+        0.05,
+        0.7,
+        0.03,
+        0.02
+      ],
+      "hair_part": [
+        0.1,
+        0.8,
+        0.05,
+        0.05
+      ],
+      "hair_color_style": [
+        0.9,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "hairline": [
+        0.05,
+        0.9,
+        0.05
+      ],
+      "beard": [
+        0.97,
+        0.02,
+        0.01,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mustache": [
+        0.98,
+        0.01,
+        0.01,
+        0
+      ],
+      "eyewear": [
+        0.95,
+        0.01,
+        0.02,
+        0.01,
+        0.01,
+        0,
+        0
+      ],
+      "headwear": [
+        0.97,
+        0.01,
+        0.01,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.01
+      ],
+      "earrings": [
+        0.2,
+        0.1,
+        0.65,
+        0.05
+      ],
+      "headphones": [
+        0.97,
+        0.03
+      ],
+      "necklace": [
+        0.9,
+        0.05,
+        0.03,
+        0.01,
+        0.01
+      ],
+      "freckles": [
+        0.4,
+        0.5,
+        0.1
+      ],
+      "eye_makeup": [
+        0.3,
+        0.6,
+        0.05,
+        0.05
+      ],
+      "top": [
+        0.1,
+        0.05,
+        0.02,
+        0.02,
+        0.05,
+        0.02,
+        0.1,
+        0.02,
+        0.5,
+        0.01,
+        0.05,
+        0.02,
+        0.01,
+        0.01,
+        0.01,
+        0.005,
+        0.005
+      ]
+    },
+    "confidence": {
+      "hair_length": 0.7,
+      "hair_texture": 0.7,
+      "hair_arrangement": 0.8,
+      "hair_sides": 0.8,
+      "hair_top": 0.6,
+      "bangs": 0.7,
+      "hair_part": 0.7,
+      "hair_color_style": 0.8,
+      "hairline": 0.7,
+      "beard": 0.9,
+      "mustache": 0.9,
+      "eyewear": 0.9,
+      "headwear": 0.9,
+      "earrings": 0.6,
+      "headphones": 0.9,
+      "necklace": 0.8,
+      "freckles": 0.5,
+      "eye_makeup": 0.6,
+      "top": 0.5
+    }
+  }
+}

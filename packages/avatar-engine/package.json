@@ -1,0 +1,23 @@
+{
+  "name": "@arkplay/avatar-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Procedural 2D avatar engine: DNA schema, generators, skeleton, poses, animation, SVG renderer and export layouts. Pure TypeScript, no DOM, deterministic.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test --test-reporter=spec \"test/**/*.test.ts\"",
+    "gallery": "node scripts/gallery.ts",
+    "codebook": "node scripts/codebook.ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

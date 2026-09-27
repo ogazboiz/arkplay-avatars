@@ -1,0 +1,29 @@
+{
+  "name": "@arkplay/avatar-vision",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Avatar from a photo, in the browser: face landmarks and segmentation, measured colours and geometry, attribute model (ONNX) with heuristic fallback, and a pure mapping to ArkPlay avatar DNA. The photo is held in memory only and never stored.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./taxonomy.json": "./taxonomy.json"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json && tsc -p demo/tsconfig.json",
+    "test": "node --test --test-reporter=spec \"test/**/*.test.ts\"",
+    "fetch-models": "node scripts/fetch-models.ts",
+    "demo": "vite --config demo/vite.config.ts",
+    "sheet": "node scripts/sheet.ts",
+    "qa-report": "node scripts/qa-report.ts"
+  },
+  "dependencies": {
+    "@arkplay/avatar-engine": "*",
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "onnxruntime-web": "^1.30.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  }
+}

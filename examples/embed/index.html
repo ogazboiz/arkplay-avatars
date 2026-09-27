@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avatar studio embed (no build step)</title>
+  <style>
+    body { font: 15px/1.5 system-ui, sans-serif; margin: 0 auto; max-width: 1100px; padding: 16px; background: #10131a; color: #e8ecf3; }
+    iframe { width: 100%; height: 760px; border: 0; border-radius: 12px; background: #1a1f2b; }
+    code { background: #1a1f2b; padding: 2px 6px; border-radius: 4px; word-break: break-all; }
+    button { font: inherit; padding: 6px 14px; border-radius: 8px; border: 1px solid #3a4460; background: #232a3b; color: inherit; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Embedded avatar studio</h1>
+  <p>
+    Serve this file from any origin (for example <code>npx serve examples/embed</code>) while <code>npm run dev</code> runs the studio.
+    It speaks the v1 postMessage protocol by hand; bundled apps use <code>mountStudio</code> from <code>@arkplay/avatar-client</code> instead.
+  </p>
+  <p><button id="save">Save from the host</button> <button id="theme">Toggle theme</button></p>
+  <p>Last saved code: <code id="code">none yet</code></p>
+  <div id="studio"></div>
+
+  <script>
+    // Where the studio app runs. Its origin is the only one we accept messages from.
+    // ?studio=<url> points it at another studio (a deployed one, or another dev port).
+    const STUDIO_URL = new URLSearchParams(location.search).get('studio') || 'http://localhost:5181/avatar/studio/'
+    const STUDIO_ORIGIN = new URL(STUDIO_URL).origin
+
+    const config = { saveLabel: 'Use this avatar', kinds: ['humanoid', 'creature'], exports: false, theme: 'dark' }
+    const url = new URL(STUDIO_URL)
+    url.searchParams.set('embed', '1')
+    url.searchParams.set('origin', location.origin)          // the studio posts only to this origin
+    url.searchParams.set('config', JSON.stringify(config))
+
+    const iframe = document.createElement('iframe')
+    iframe.title = 'Avatar studio'
+    iframe.src = url.href
+    iframe.allow = 'clipboard-write; camera'                   // "Copy code", and the camera for "From photo"
+    document.getElementById('studio').append(iframe)
+
+    // Every message is an envelope { source: 'arkplay-avatar', v: 1, type, … }.
+    const send = (msg) => iframe.contentWindow.postMessage({ source: 'arkplay-avatar', v: 1, ...msg }, STUDIO_ORIGIN)
+    let theme = config.theme
+
+    window.addEventListener('message', (e) => {
+      // Accept only the studio's origin AND our own iframe's window.
+      if (e.origin !== STUDIO_ORIGIN || e.source !== iframe.contentWindow) return
+      const m = e.data
+      if (!m || m.source !== 'arkplay-avatar' || m.v !== 1) return
+      switch (m.type) {
+        case 'ready':
+          console.log('studio ready, engine', m.engineVersion)
+          break
+        case 'change':
+          // Debounced while the player edits: m.dna and m.code.
+          break
+        case 'save':
+          // The studio stores nothing in embed mode: keeping the avatar is the host's job.
+          document.getElementById('code').textContent = m.code
+          break
+        case 'resize':
+          iframe.style.height = Math.max(560, m.height) + 'px'
+          break
+        case 'cancel':
+          console.log('player cancelled')
+          break
+        case 'error':
+          console.warn('studio error', m.code, m.message)
+          break
+      }
+    })
+
+    document.getElementById('save').onclick = () => send({ type: 'requestSave' })
+    document.getElementById('theme').onclick = () => send({ type: 'theme', theme: (theme = theme === 'dark' ? 'light' : 'dark') })
+  </script>
+</body>
+</html>

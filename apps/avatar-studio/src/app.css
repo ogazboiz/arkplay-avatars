@@ -1,0 +1,191 @@
+/* Page shell for the studio app. The studio styles itself (@arkplay/avatar-studio/styles.css);
+ * this file is the page around it: the ArkPlay background, the header and the embed frame.
+ * Values mirror the website's tokens so the standalone page feels like the site. */
+
+:root {
+  --page-bg: linear-gradient(180deg, #221502 0%, #1c1408 15%, #05070e 51%, #05070e 100%);
+  --page-base: #05070e;
+  color-scheme: dark;
+}
+:root[data-theme='light'] {
+  --page-base: #f7f5f0;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-base);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg) no-repeat;
+  background-size: 100% 1200px;
+  background-color: var(--page-base);
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme='light'] body {
+  background: radial-gradient(90% 600px at 50% 0%, rgba(242, 209, 74, 0.28), rgba(242, 209, 74, 0) 70%) no-repeat, #f7f5f0;
+  color: #17130b;
+}
+
+.app {
+  --gutter: 28px;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(1440px, 100% - var(--gutter) * 2);
+  margin: 0 auto;
+  padding: 18px 0 16px;
+}
+.app-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+.app-brand__mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Bungee Inline', 'Space Grotesk', system-ui, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+.app-brand__word {
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: #9999a3;
+}
+:root[data-theme='light'] .app-brand__word {
+  color: #5f584a;
+}
+.app-header__title {
+  padding-left: 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+:root[data-theme='light'] .app-header__title {
+  border-color: rgba(30, 24, 10, 0.16);
+}
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.app-theme,
+.app-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.app-theme:hover,
+.app-back:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+:root[data-theme='light'] .app-theme,
+:root[data-theme='light'] .app-back {
+  border-color: rgba(30, 24, 10, 0.16);
+  background: rgba(30, 24, 10, 0.04);
+}
+.app-theme:focus-visible,
+.app-back:focus-visible,
+.app-brand:focus-visible {
+  outline: 2px solid #f2d14a;
+  outline-offset: 3px;
+}
+
+.app-main {
+  width: min(1440px, 100% - var(--gutter) * 2);
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+:root[data-theme='light'] .app-main .aps-root {
+  background: transparent;
+}
+
+/* Embed mode: no page chrome, a transparent page so the host's background shows. */
+.is-embed body {
+  min-height: 0;
+  background: transparent;
+}
+.app-embed {
+  padding: 12px;
+}
+
+.app-error {
+  max-width: 620px;
+  margin: 12vh auto;
+  padding: 28px;
+  border: 1px solid rgba(214, 74, 74, 0.4);
+  border-radius: 20px;
+  background: rgba(214, 74, 74, 0.1);
+  line-height: 1.6;
+}
+.app-error h1 {
+  margin: 0 0 10px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 22px;
+}
+.app-error code {
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+@media (max-width: 860px) {
+  .app {
+    --gutter: 12px;
+  }
+  .app-header {
+    padding: 12px 0 10px;
+    gap: 10px;
+  }
+  .app-header__title {
+    display: none;
+  }
+  .app-theme {
+    display: none;
+  }
+  .app-back {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 12.5px;
+  }
+  .app-main {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "_comment": "Contract between the Python attribute-model trainer and the TS runtime (packages/avatar-vision). Heads, class ids and their ORDER are frozen once a model ships: add classes only at the end and retrain. Only photo-visible, non-sensitive attributes: never predict gender, race/ethnicity, age group, body weight or identity. Colours and face geometry are MEASURED (landmarks + segmentation), not predicted.",
+  "version": 1,
+  "crop": {
+    "_comment": "Aligned head-and-shoulders crop, identical in training and at runtime. eyeL/eyeR = eye centres, mouthL/mouthR = mouth corners (YuNet 5-point in Python, MediaPipe landmarks in the browser). Rotate so the eyes are level; d = |eyeMid - mouthMid|; square of side sizeD*d centred at eyeMid + centerD*d along the face's down direction; out-of-image pixels = pad (RGB 0..255); resize to `size`.",
+    "sizeD": 8.0,
+    "centerD": 1.0,
+    "size": 224,
+    "pad": [128, 128, 128]
+  },
+  "heads": [
+    {
+      "id": "hair_length",
+      "type": "ordinal",
+      "classes": ["bald", "buzz", "short", "ear", "chin", "shoulder", "chest", "waist"],
+      "prompts": ["a completely bald head", "a buzz cut", "short hair", "ear-length hair", "chin-length hair", "shoulder-length hair", "long hair past the shoulders", "very long hair down to the waist"]
+    },
+    {
+      "id": "hair_texture",
+      "type": "ordinal",
+      "classes": ["straight", "wavy", "curly", "coily"],
+      "prompts": ["straight hair", "wavy hair", "curly hair", "tightly coiled kinky hair"]
+    },
+    {
+      "id": "hair_arrangement",
+      "type": "multiclass",
+      "classes": ["down", "ponytail", "high-ponytail", "bun", "top-knot", "two-buns", "two-ponytails", "braid", "two-braids", "box-braids", "cornrows", "locs", "twists", "afro", "afro-puffs"],
+      "prompts": ["hair worn down loose", "a low ponytail", "a high ponytail", "a hair bun", "a man bun top knot", "two space buns", "two pigtails", "a single braid", "two braids", "box braids", "cornrows", "dreadlocks", "two-strand twists", "a big afro", "two afro puffs"]
+    },
+    {
+      "id": "hair_sides",
+      "type": "multiclass",
+      "classes": ["natural", "undercut", "mohawk"],
+      "prompts": ["natural hair on the sides", "an undercut with shaved sides", "a mohawk"]
+    },
+    {
+      "id": "hair_top",
+      "type": "multiclass",
+      "classes": ["natural", "slicked-back", "quiff", "spiky", "side-swept", "messy"],
+      "prompts": ["hair styled naturally", "slicked back hair", "a quiff pompadour", "spiky hair", "side-swept hair", "messy tousled hair"]
+    },
+    {
+      "id": "bangs",
+      "type": "multiclass",
+      "classes": ["none", "straight", "side", "curtain", "wispy"],
+      "prompts": ["no bangs, forehead visible", "straight blunt bangs", "side-swept bangs", "curtain bangs", "wispy bangs"]
+    },
+    {
+      "id": "hair_part",
+      "type": "multiclass",
+      "classes": ["none", "left", "center", "right"],
+      "flip": { "left": "right", "right": "left" },
+      "prompts": ["hair with no visible part", "hair parted on the left", "hair parted in the middle", "hair parted on the right"]
+    },
+    {
+      "id": "hair_color_style",
+      "type": "multiclass",
+      "classes": ["solid", "highlights", "ombre", "two-tone"],
+      "prompts": ["hair of one solid colour", "hair with highlights", "ombre hair with lighter ends", "two-tone dyed hair"]
+    },
+    {
+      "id": "hairline",
+      "type": "ordinal",
+      "classes": ["receding", "normal", "low"],
+      "prompts": ["a receding hairline", "a normal hairline", "a low hairline"]
+    },
+    {
+      "id": "beard",
+      "type": "multiclass",
+      "classes": ["none", "stubble", "goatee", "chinstrap", "short", "full", "long"],
+      "prompts": ["clean shaven", "stubble", "a goatee", "a chinstrap beard", "a short beard", "a full beard", "a long beard"]
+    },
+    {
+      "id": "mustache",
+      "type": "multiclass",
+      "classes": ["none", "thin", "full", "handlebar"],
+      "prompts": ["no mustache", "a thin mustache", "a full mustache", "a handlebar mustache"]
+    },
+    {
+      "id": "eyewear",
+      "type": "multiclass",
+      "classes": ["none", "round-glasses", "rect-glasses", "cateye-glasses", "half-rims", "sunglasses", "aviators"],
+      "prompts": ["no glasses", "round eyeglasses", "rectangular eyeglasses", "cat-eye glasses", "half-rim glasses", "dark sunglasses", "aviator sunglasses"]
+    },
+    {
+      "id": "headwear",
+      "type": "multiclass",
+      "classes": ["none", "cap", "beanie", "bucket", "fedora", "cowboy-hat", "beret", "hijab", "turban", "headwrap", "durag", "headband", "bandana", "hood", "kippah", "visor"],
+      "prompts": ["no hat", "a baseball cap", "a beanie", "a bucket hat", "a fedora", "a cowboy hat", "a beret", "a hijab", "a turban", "a head wrap", "a durag", "a headband", "a bandana on the head", "a hood up", "a kippah", "a sun visor"]
+    },
+    {
+      "id": "earrings",
+      "type": "multiclass",
+      "classes": ["none", "studs", "hoops", "drops"],
+      "prompts": ["no earrings", "stud earrings", "hoop earrings", "drop earrings"]
+    },
+    {
+      "id": "headphones",
+      "type": "binary",
+      "classes": ["no", "yes"],
+      "prompts": ["no headphones", "wearing over-ear headphones"]
+    },
+    {
+      "id": "necklace",
+      "type": "multiclass",
+      "classes": ["none", "chain", "pendant", "pearls", "choker"],
+      "prompts": ["no necklace", "a chain necklace", "a pendant necklace", "a pearl necklace", "a choker"]
+    },
+    {
+      "id": "freckles",
+      "type": "ordinal",
+      "classes": ["none", "light", "heavy"],
+      "prompts": ["no freckles", "a few freckles", "lots of freckles"]
+    },
+    {
+      "id": "eye_makeup",
+      "type": "multiclass",
+      "classes": ["none", "liner", "shadow", "both"],
+      "prompts": ["no eye makeup", "eyeliner", "eyeshadow", "eyeliner and eyeshadow"]
+    },
+    {
+      "id": "top",
+      "type": "multiclass",
+      "classes": ["tshirt", "longsleeve", "tank", "hoodie", "sweater", "turtleneck", "shirt", "polo", "blouse", "jersey", "dress", "jacket", "denim-jacket", "leather-jacket", "blazer", "puffer", "cardigan"],
+      "prompts": ["a t-shirt", "a long-sleeve top", "a tank top", "a hoodie", "a sweater", "a turtleneck", "a button-up shirt", "a polo shirt", "a blouse", "a sports jersey", "a dress", "a jacket", "a denim jacket", "a leather jacket", "a blazer", "a puffer jacket", "a cardigan"]
+    }
+  ],
+  "measured": {
+    "_comment": "Produced by the runtime from MediaPipe landmarks and segmentation, never by the model.",
+    "colors": ["skin", "hair", "iris", "lips", "brows", "top", "topSecondary", "background"],
+    "geometry": ["faceWidthRatio", "jawRatio", "chinRatio", "foreheadRatio", "cheekFullness", "eyeSize", "eyeSpacing", "eyeTilt", "browThickness", "browArch", "noseWidth", "noseLength", "mouthWidth", "lipFullness", "earVisibility"],
+    "hair": ["hairArea", "hairTopHeight", "hairWidth", "hairBottom", "foreheadCoverage", "partX"],
+    "expression": ["smile", "mouthOpen", "browRaise", "eyeOpen"]
+  }
+}

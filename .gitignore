@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Local environment (never commit secrets)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated previews and QA output
+packages/avatar-engine/out/
+packages/avatar-vision/out/
+packages/avatar-vision/demo/dist/
+
+# Downloaded vision models and runtimes (npm run fetch-models -w @arkplay/avatar-vision)
+packages/avatar-vision/models/face_landmarker.task
+packages/avatar-vision/models/selfie_multiclass_256x256.tflite
+packages/avatar-vision/models/runtime/
+packages/avatar-vision/models/*.part
+
+# Editors and OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+examples/out/

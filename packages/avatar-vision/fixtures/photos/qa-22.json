@@ -1,0 +1,87 @@
+{
+  "file": "qa-22.jpg",
+  "crop": "crops/qa-22.png",
+  "id": "qa-00014",
+  "seed": 3000014,
+  "width": 832,
+  "height": 1024,
+  "labels": {
+    "hair_length": null,
+    "hair_texture": null,
+    "hair_arrangement": null,
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": null,
+    "hair_part": null,
+    "hair_color_style": null,
+    "hairline": null,
+    "beard": null,
+    "mustache": null,
+    "eyewear": "none",
+    "headwear": "durag",
+    "earrings": null,
+    "headphones": "no",
+    "necklace": "none",
+    "freckles": null,
+    "eye_makeup": null,
+    "top": null
+  },
+  "masked": [
+    "beard",
+    "mustache",
+    "earrings",
+    "freckles",
+    "eye_makeup",
+    "top"
+  ],
+  "targeted": {
+    "hair_length": null,
+    "hair_texture": null,
+    "hair_arrangement": null,
+    "hair_sides": null,
+    "hair_top": null,
+    "bangs": null,
+    "hair_part": null,
+    "hair_color_style": null,
+    "hairline": null,
+    "beard": "none",
+    "mustache": "full",
+    "eyewear": "none",
+    "headwear": "durag",
+    "earrings": "studs",
+    "headphones": "no",
+    "necklace": "none",
+    "freckles": "heavy",
+    "eye_makeup": "liner",
+    "top": "longsleeve"
+  },
+  "face": {
+    "box": [
+      221.72,
+      253.94,
+      289.82,
+      410.87
+    ],
+    "eyeL": [
+      342.25,
+      409.84
+    ],
+    "eyeR": [
+      465.05,
+      408.94
+    ],
+    "nose": [
+      431.95,
+      486.08
+    ],
+    "mouthL": [
+      352.09,
+      553.53
+    ],
+    "mouthR": [
+      456.89,
+      553.43
+    ],
+    "score": 0.9304
+  }
+}

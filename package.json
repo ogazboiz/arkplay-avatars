@@ -1,0 +1,32 @@
+{
+  "name": "arkplay-avatars",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ArkPlay Avatars: a deterministic, procedural 2D avatar engine, a React avatar studio, a typed client and iframe embed, and avatar-from-a-photo in the browser.",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @arkplay/avatar-studio-app",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "gallery": "npm run gallery -w @arkplay/avatar-engine",
+    "codebook": "npm run codebook -w @arkplay/avatar-engine",
+    "examples": "node examples/render-examples.ts"
+  },
+  "devDependencies": {
+    "@arkplay/avatar-engine": "*",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^24.13.6",
+    "typescript": "~5.9.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
